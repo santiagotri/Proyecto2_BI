@@ -1,0 +1,115 @@
+[2022-05-17 02:01:46,929] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: ETL.crear_tablas_en_postgres scheduled__2022-05-16T00:00:00+00:00 [queued]>
+[2022-05-17 02:01:46,979] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: ETL.crear_tablas_en_postgres scheduled__2022-05-16T00:00:00+00:00 [queued]>
+[2022-05-17 02:01:46,989] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-17 02:01:46,996] {taskinstance.py:1250} INFO - Starting attempt 1 of 1
+[2022-05-17 02:01:47,004] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-17 02:01:47,068] {taskinstance.py:1270} INFO - Executing <Task(PostgresOperator): crear_tablas_en_postgres> on 2022-05-16 00:00:00+00:00
+[2022-05-17 02:01:47,093] {standard_task_runner.py:52} INFO - Started process 236 to run task
+[2022-05-17 02:01:47,113] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'crear_tablas_en_postgres', 'scheduled__2022-05-16T00:00:00+00:00', '--job-id', '55', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmp3b_l0bk_', '--error-file', '/tmp/tmphbxy01li']
+[2022-05-17 02:01:47,119] {standard_task_runner.py:80} INFO - Job 55: Subtask crear_tablas_en_postgres
+[2022-05-17 02:01:49,024] {logging_mixin.py:109} INFO - Running <TaskInstance: ETL.crear_tablas_en_postgres scheduled__2022-05-16T00:00:00+00:00 [running]> on host 9ab1054ea248
+[2022-05-17 02:01:49,424] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=estudiante@uniandes.edu.co
+AIRFLOW_CTX_DAG_OWNER=Estudiante
+AIRFLOW_CTX_DAG_ID=ETL
+AIRFLOW_CTX_TASK_ID=crear_tablas_en_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-16T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-16T00:00:00+00:00
+[2022-05-17 02:01:49,577] {base.py:79} INFO - Using connection to: id: postgres_localhost. Host: host.docker.internal, Port: 5432, Schema: WWW23, Login: Grupo23BI, Password: ***, extra: {}
+[2022-05-17 02:01:51,026] {dbapi.py:225} INFO - Running statement: 
+    
+        CREATE TABLE IF NOT EXISTS date_table(
+            Date_key DATE PRIMARY KEY,
+            Day_Number INT,
+            Day_val INT,
+            Month_val VARCHAR(20),
+            Short_Month VARCHAR(10),
+            Calendar_Month_Number INT,
+            Calendar_Year INT,
+            Fiscal_Month_Number INT,
+            Fiscal_Year INT
+        );
+
+        CREATE TABLE IF NOT EXISTS city(
+            City_Key INT PRIMARY KEY,
+            City VARCHAR(150),
+            State_Province VARCHAR(150),
+            Country VARCHAR(150),
+            Continent VARCHAR(150),
+            Sales_Territory VARCHAR(150),
+            Region VARCHAR(150),
+            Subregion VARCHAR(150),
+            Latest_Recorded_Population INT
+        );
+
+        CREATE TABLE IF NOT EXISTS customer(
+            Customer_Key INT PRIMARY KEY,
+            Customer VARCHAR(150),
+            Bill_To_Customer VARCHAR(150),
+            Category VARCHAR(150),
+            Buying_Group VARCHAR(150),
+            Primary_Contact VARCHAR(150),
+            Postal_Code INT
+        );
+
+        CREATE TABLE IF NOT EXISTS employee(
+            Employee_Key INT PRIMARY KEY,
+            Employee VARCHAR(150),
+            Preferred_Name VARCHAR(150),
+            Is_Salesperson BOOLEAN
+        );
+
+        CREATE TABLE IF NOT EXISTS stockitem(
+            Stock_Item_Key INT PRIMARY KEY,
+            WWI_Stock_Item_ID INT,
+            Stock_Item VARCHAR(200),
+            Color VARCHAR(50),
+            Selling_Package VARCHAR(50),
+            Buying_Package VARCHAR(50),
+            Brand VARCHAR(50),
+            Size_val VARCHAR(50),
+            Lead_Time_Days INT,
+            Quantity_Per_Outer INT,
+            Is_Chiller_Stock BOOLEAN,
+            Tax_Rate DECIMAL,
+            Unit_Price DECIMAL,
+            Recommended_Retail_Price DECIMAL,
+            Typical_Weight_Per_Unit DECIMAL
+        );
+
+
+        CREATE TABLE IF NOT EXISTS fact_order(
+            Order_Key INT PRIMARY KEY,
+            City_Key INT REFERENCES city (city_key),
+            Customer_Key INT REFERENCES customer (customer_key),
+            Stock_Item_Key INT REFERENCES stockitem (stock_item_key),
+            Order_Date_Key DATE REFERENCES date_table (date_key),
+            Picked_Date_Key DATE REFERENCES date_table (date_key),
+            Salesperson_Key INT REFERENCES employee (employee_key),
+            Picker_Key INT REFERENCES employee (employee_key),
+            Package VARCHAR(50),
+            Quantity INT,
+            Unit_Price DECIMAL,
+            Tax_Rate DECIMAL,
+            Total_Excluding_Tax DECIMAL,
+            Tax_Amount DECIMAL,
+            Total_Including_Tax DECIMAL
+        );
+    , parameters: None
+[2022-05-17 02:01:51,169] {postgres.py:94} INFO - NOTICE:  la relación «date_table» ya existe, omitiendo
+
+[2022-05-17 02:01:51,200] {postgres.py:94} INFO - NOTICE:  la relación «city» ya existe, omitiendo
+
+[2022-05-17 02:01:51,216] {postgres.py:94} INFO - NOTICE:  la relación «customer» ya existe, omitiendo
+
+[2022-05-17 02:01:51,227] {postgres.py:94} INFO - NOTICE:  la relación «employee» ya existe, omitiendo
+
+[2022-05-17 02:01:51,227] {postgres.py:94} INFO - NOTICE:  la relación «stockitem» ya existe, omitiendo
+
+[2022-05-17 02:01:51,232] {postgres.py:94} INFO - NOTICE:  la relación «fact_order» ya existe, omitiendo
+
+[2022-05-17 02:01:51,399] {taskinstance.py:1288} INFO - Marking task as SUCCESS. dag_id=ETL, task_id=crear_tablas_en_postgres, execution_date=20220516T000000, start_date=20220517T020146, end_date=20220517T020151
+[2022-05-17 02:01:51,690] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-17 02:01:52,248] {local_task_job.py:264} INFO - 5 downstream tasks scheduled from follow-on schedule check

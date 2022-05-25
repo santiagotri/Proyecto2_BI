@@ -1,0 +1,1190 @@
+[2022-05-16 22:55:46,865] {processor.py:163} INFO - Started process (PID=1871) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 22:55:46,879] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 22:55:46,894] {logging_mixin.py:109} INFO - [2022-05-16 22:55:46,894] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 22:56:03,363] {logging_mixin.py:109} INFO - [2022-05-16 22:56:03,274] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 22:56:03,364] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 22:56:03,423] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 16.561 seconds
+[2022-05-16 22:56:33,511] {processor.py:163} INFO - Started process (PID=1905) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 22:56:33,513] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 22:56:33,514] {logging_mixin.py:109} INFO - [2022-05-16 22:56:33,514] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 22:56:34,715] {logging_mixin.py:109} INFO - [2022-05-16 22:56:34,695] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 22:56:34,716] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 22:56:34,738] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.231 seconds
+[2022-05-16 22:57:05,845] {processor.py:163} INFO - Started process (PID=1940) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 22:57:05,942] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 22:57:05,989] {logging_mixin.py:109} INFO - [2022-05-16 22:57:05,989] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 22:57:25,743] {logging_mixin.py:109} INFO - [2022-05-16 22:57:25,075] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 22:57:25,752] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 22:57:25,816] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 19.977 seconds
+[2022-05-16 22:58:01,733] {processor.py:163} INFO - Started process (PID=1955) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 22:58:01,746] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 22:58:01,752] {logging_mixin.py:109} INFO - [2022-05-16 22:58:01,752] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 22:58:03,170] {logging_mixin.py:109} INFO - [2022-05-16 22:58:03,139] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 22:58:03,171] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 22:58:03,197] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.478 seconds
+[2022-05-16 22:58:33,870] {processor.py:163} INFO - Started process (PID=1980) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 22:58:33,887] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 22:58:33,900] {logging_mixin.py:109} INFO - [2022-05-16 22:58:33,900] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 22:58:38,049] {logging_mixin.py:109} INFO - [2022-05-16 22:58:38,020] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 22:58:38,050] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 22:58:38,076] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 4.211 seconds
+[2022-05-16 22:59:08,243] {processor.py:163} INFO - Started process (PID=2003) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 22:59:08,246] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 22:59:08,247] {logging_mixin.py:109} INFO - [2022-05-16 22:59:08,247] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 22:59:11,114] {logging_mixin.py:109} INFO - [2022-05-16 22:59:11,003] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 22:59:11,117] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 22:59:11,249] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 3.012 seconds
+[2022-05-16 22:59:41,396] {processor.py:163} INFO - Started process (PID=2030) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 22:59:41,399] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 22:59:41,400] {logging_mixin.py:109} INFO - [2022-05-16 22:59:41,400] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 22:59:42,689] {logging_mixin.py:109} INFO - [2022-05-16 22:59:42,652] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 22:59:42,690] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 22:59:42,728] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.335 seconds
+[2022-05-16 23:00:12,804] {processor.py:163} INFO - Started process (PID=2057) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:00:12,806] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:00:12,807] {logging_mixin.py:109} INFO - [2022-05-16 23:00:12,807] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:00:13,771] {logging_mixin.py:109} INFO - [2022-05-16 23:00:13,745] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 23:00:13,772] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:00:13,796] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 0.996 seconds
+[2022-05-16 23:00:44,351] {processor.py:163} INFO - Started process (PID=2085) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:00:44,373] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:00:44,390] {logging_mixin.py:109} INFO - [2022-05-16 23:00:44,389] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:00:46,324] {logging_mixin.py:109} INFO - [2022-05-16 23:00:46,258] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 23:00:46,325] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:00:46,433] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 2.087 seconds
+[2022-05-16 23:01:17,107] {processor.py:163} INFO - Started process (PID=2111) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:01:17,108] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:01:17,115] {logging_mixin.py:109} INFO - [2022-05-16 23:01:17,115] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:01:20,717] {logging_mixin.py:109} INFO - [2022-05-16 23:01:20,535] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 23:01:20,718] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:01:20,757] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 3.654 seconds
+[2022-05-16 23:01:51,696] {processor.py:163} INFO - Started process (PID=2136) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:01:51,702] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:01:51,705] {logging_mixin.py:109} INFO - [2022-05-16 23:01:51,705] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:01:55,701] {logging_mixin.py:109} INFO - [2022-05-16 23:01:55,389] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 23:01:55,709] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:01:55,781] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 4.089 seconds
+[2022-05-16 23:02:26,772] {processor.py:163} INFO - Started process (PID=2162) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:02:26,776] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:02:26,788] {logging_mixin.py:109} INFO - [2022-05-16 23:02:26,788] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:02:28,392] {logging_mixin.py:109} INFO - [2022-05-16 23:02:28,337] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 23:02:28,396] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:02:28,446] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.683 seconds
+[2022-05-16 23:02:58,814] {processor.py:163} INFO - Started process (PID=2200) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:02:58,817] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:02:58,818] {logging_mixin.py:109} INFO - [2022-05-16 23:02:58,818] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:03:00,203] {logging_mixin.py:109} INFO - [2022-05-16 23:03:00,162] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 23:03:00,204] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:03:00,237] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.427 seconds
+[2022-05-16 23:03:30,393] {processor.py:163} INFO - Started process (PID=2225) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:03:30,395] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:03:30,396] {logging_mixin.py:109} INFO - [2022-05-16 23:03:30,396] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:03:31,351] {logging_mixin.py:109} INFO - [2022-05-16 23:03:31,324] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 23:03:31,351] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:03:31,380] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 0.991 seconds
+[2022-05-16 23:04:02,235] {processor.py:163} INFO - Started process (PID=2250) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:04:02,294] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:04:02,297] {logging_mixin.py:109} INFO - [2022-05-16 23:04:02,297] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:04:05,087] {logging_mixin.py:109} INFO - [2022-05-16 23:04:05,062] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 23:04:05,088] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:04:05,115] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 2.900 seconds
+[2022-05-16 23:04:35,902] {processor.py:163} INFO - Started process (PID=2274) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:04:35,904] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:04:35,920] {logging_mixin.py:109} INFO - [2022-05-16 23:04:35,920] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:04:43,820] {logging_mixin.py:109} INFO - [2022-05-16 23:04:41,430] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 41, in <module>
+    sql=insert_query_city(csv_path = "dimension_city")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 9, in insert_query_city
+    dataframe =cargar_datos(kwargs['csv_path'])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 51, in __init__
+    self._open_handles(src, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/base_parser.py", line 229, in _open_handles
+    errors=kwds.get("encoding_errors", "strict"),
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 707, in get_handle
+    newline="",
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/data/dimension_city.csv'
+[2022-05-16 23:04:43,823] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:04:43,934] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 8.036 seconds
+[2022-05-16 23:07:26,444] {processor.py:163} INFO - Started process (PID=54) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:07:26,446] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:07:26,447] {logging_mixin.py:109} INFO - [2022-05-16 23:07:26,447] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:07:27,961] {logging_mixin.py:109} INFO - [2022-05-16 23:07:27,936] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:07:27,962] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:07:27,990] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.549 seconds
+[2022-05-16 23:07:58,248] {processor.py:163} INFO - Started process (PID=92) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:07:58,250] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:07:58,251] {logging_mixin.py:109} INFO - [2022-05-16 23:07:58,251] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:07:59,588] {logging_mixin.py:109} INFO - [2022-05-16 23:07:59,553] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:07:59,589] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:07:59,614] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.370 seconds
+[2022-05-16 23:08:30,418] {processor.py:163} INFO - Started process (PID=118) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:08:30,431] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:08:30,433] {logging_mixin.py:109} INFO - [2022-05-16 23:08:30,433] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:08:32,114] {logging_mixin.py:109} INFO - [2022-05-16 23:08:32,081] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:08:32,115] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:08:32,147] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.734 seconds
+[2022-05-16 23:09:02,421] {processor.py:163} INFO - Started process (PID=154) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:09:02,423] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:09:02,424] {logging_mixin.py:109} INFO - [2022-05-16 23:09:02,424] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:09:03,708] {logging_mixin.py:109} INFO - [2022-05-16 23:09:03,683] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:09:03,711] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:09:03,750] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.333 seconds
+[2022-05-16 23:09:33,979] {processor.py:163} INFO - Started process (PID=178) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:09:33,981] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:09:33,983] {logging_mixin.py:109} INFO - [2022-05-16 23:09:33,982] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:09:35,170] {logging_mixin.py:109} INFO - [2022-05-16 23:09:35,146] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:09:35,171] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:09:35,198] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.225 seconds
+[2022-05-16 23:10:05,273] {processor.py:163} INFO - Started process (PID=204) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:10:05,275] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:10:05,276] {logging_mixin.py:109} INFO - [2022-05-16 23:10:05,276] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:10:06,297] {logging_mixin.py:109} INFO - [2022-05-16 23:10:06,275] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:10:06,298] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:10:06,324] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.054 seconds
+[2022-05-16 23:10:36,455] {processor.py:163} INFO - Started process (PID=239) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:10:36,457] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:10:36,458] {logging_mixin.py:109} INFO - [2022-05-16 23:10:36,458] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:10:37,895] {logging_mixin.py:109} INFO - [2022-05-16 23:10:37,863] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:10:37,896] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:10:37,939] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.487 seconds
+[2022-05-16 23:11:08,135] {processor.py:163} INFO - Started process (PID=274) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:11:08,138] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:11:08,139] {logging_mixin.py:109} INFO - [2022-05-16 23:11:08,139] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:11:09,144] {logging_mixin.py:109} INFO - [2022-05-16 23:11:09,117] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:11:09,144] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:11:09,168] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.041 seconds
+[2022-05-16 23:11:39,338] {processor.py:163} INFO - Started process (PID=299) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:11:39,340] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:11:39,341] {logging_mixin.py:109} INFO - [2022-05-16 23:11:39,341] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:11:40,305] {logging_mixin.py:109} INFO - [2022-05-16 23:11:40,281] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:11:40,306] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:11:40,332] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 0.997 seconds
+[2022-05-16 23:12:10,586] {processor.py:163} INFO - Started process (PID=334) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:12:10,587] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:12:10,588] {logging_mixin.py:109} INFO - [2022-05-16 23:12:10,588] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:12:11,670] {logging_mixin.py:109} INFO - [2022-05-16 23:12:11,649] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:12:11,671] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:12:11,695] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.113 seconds
+[2022-05-16 23:12:41,996] {processor.py:163} INFO - Started process (PID=359) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:12:41,998] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:12:42,000] {logging_mixin.py:109} INFO - [2022-05-16 23:12:42,000] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:12:43,043] {logging_mixin.py:109} INFO - [2022-05-16 23:12:43,017] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:12:43,044] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:12:43,068] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.076 seconds
+[2022-05-16 23:13:13,435] {processor.py:163} INFO - Started process (PID=394) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:13:13,436] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:13:13,437] {logging_mixin.py:109} INFO - [2022-05-16 23:13:13,437] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:13:14,626] {logging_mixin.py:109} INFO - [2022-05-16 23:13:14,599] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:13:14,627] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:13:14,656] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.236 seconds
+[2022-05-16 23:13:44,850] {processor.py:163} INFO - Started process (PID=418) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:13:44,852] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:13:44,853] {logging_mixin.py:109} INFO - [2022-05-16 23:13:44,853] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:13:46,047] {logging_mixin.py:109} INFO - [2022-05-16 23:13:46,022] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:13:46,048] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:13:46,074] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.229 seconds
+[2022-05-16 23:14:16,353] {processor.py:163} INFO - Started process (PID=443) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:14:16,356] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:14:16,357] {logging_mixin.py:109} INFO - [2022-05-16 23:14:16,357] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:14:17,522] {logging_mixin.py:109} INFO - [2022-05-16 23:14:17,496] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:14:17,523] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:14:17,547] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.197 seconds
+[2022-05-16 23:14:47,768] {processor.py:163} INFO - Started process (PID=477) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:14:47,772] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:14:47,776] {logging_mixin.py:109} INFO - [2022-05-16 23:14:47,776] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:14:49,014] {logging_mixin.py:109} INFO - [2022-05-16 23:14:48,989] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:14:49,015] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:14:49,082] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.334 seconds
+[2022-05-16 23:15:19,297] {processor.py:163} INFO - Started process (PID=503) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:15:19,298] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:15:19,299] {logging_mixin.py:109} INFO - [2022-05-16 23:15:19,299] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:15:20,346] {logging_mixin.py:109} INFO - [2022-05-16 23:15:20,321] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:15:20,347] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:15:20,370] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.077 seconds
+[2022-05-16 23:15:50,906] {processor.py:163} INFO - Started process (PID=539) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:15:50,908] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:15:50,910] {logging_mixin.py:109} INFO - [2022-05-16 23:15:50,910] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:15:52,087] {logging_mixin.py:109} INFO - [2022-05-16 23:15:52,061] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:15:52,087] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:15:52,125] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.225 seconds
+[2022-05-16 23:16:22,302] {processor.py:163} INFO - Started process (PID=562) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:16:22,304] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:16:22,304] {logging_mixin.py:109} INFO - [2022-05-16 23:16:22,304] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:16:23,249] {logging_mixin.py:109} INFO - [2022-05-16 23:16:23,225] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:16:23,250] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:16:23,273] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 0.975 seconds
+[2022-05-16 23:16:53,502] {processor.py:163} INFO - Started process (PID=600) to work on /opt/airflow/dags/ETL.py
+[2022-05-16 23:16:53,504] {processor.py:642} INFO - Processing file /opt/airflow/dags/ETL.py for tasks to queue
+[2022-05-16 23:16:53,505] {logging_mixin.py:109} INFO - [2022-05-16 23:16:53,505] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/ETL.py
+[2022-05-16 23:16:55,158] {logging_mixin.py:109} INFO - [2022-05-16 23:16:55,116] {dagbag.py:334} ERROR - Failed to import: /opt/airflow/dags/ETL.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 331, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/ETL.py", line 48, in <module>
+    sql=insert_query_customer(csv_path ="dimension_customer")
+  File "/opt/airflow/dags/utils/insert_queries.py", line 19, in insert_query_customer
+    dataframe = cargar_datos(kwargs["csv_path"])
+  File "/opt/airflow/dags/utils/file_util.py", line 4, in cargar_datos
+    df = pd.read_csv("/opt/airflow/data/Datos/" + name + ".csv", sep=',', encoding = 'utf-8', index_col=False)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 586, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 482, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 811, in __init__
+    self._engine = self._make_engine(self.engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/readers.py", line 1040, in _make_engine
+    return mapping[engine](self.f, **self.options)  # type: ignore[call-arg]
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 69, in __init__
+    self._reader = parsers.TextReader(self.handles.handle, **kwds)
+  File "pandas/_libs/parsers.pyx", line 542, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas/_libs/parsers.pyx", line 642, in pandas._libs.parsers.TextReader._get_header
+  File "pandas/_libs/parsers.pyx", line 843, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "pandas/_libs/parsers.pyx", line 1917, in pandas._libs.parsers.raise_parser_error
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xc4 in position 7437: invalid continuation byte
+[2022-05-16 23:16:55,160] {processor.py:654} WARNING - No viable dags retrieved from /opt/airflow/dags/ETL.py
+[2022-05-16 23:16:55,189] {processor.py:171} INFO - Processing /opt/airflow/dags/ETL.py took 1.692 seconds

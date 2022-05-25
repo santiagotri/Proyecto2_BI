@@ -1,0 +1,249 @@
+[2022-05-19 01:22:54,481] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: ETL.poblar_tablas.poblar_employee scheduled__2022-05-18T00:00:00+00:00 [queued]>
+[2022-05-19 01:22:54,513] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: ETL.poblar_tablas.poblar_employee scheduled__2022-05-18T00:00:00+00:00 [queued]>
+[2022-05-19 01:22:54,523] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 01:22:54,531] {taskinstance.py:1250} INFO - Starting attempt 1 of 1
+[2022-05-19 01:22:54,532] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-19 01:22:54,600] {taskinstance.py:1270} INFO - Executing <Task(PostgresOperator): poblar_tablas.poblar_employee> on 2022-05-18 00:00:00+00:00
+[2022-05-19 01:22:54,638] {standard_task_runner.py:52} INFO - Started process 114 to run task
+[2022-05-19 01:22:54,643] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'ETL', 'poblar_tablas.poblar_employee', 'scheduled__2022-05-18T00:00:00+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/ETL.py', '--cfg-path', '/tmp/tmpdctysznm', '--error-file', '/tmp/tmpg310zg87']
+[2022-05-19 01:22:54,681] {standard_task_runner.py:80} INFO - Job 124: Subtask poblar_tablas.poblar_employee
+[2022-05-19 01:22:55,091] {logging_mixin.py:109} INFO - Running <TaskInstance: ETL.poblar_tablas.poblar_employee scheduled__2022-05-18T00:00:00+00:00 [running]> on host 9ab1054ea248
+[2022-05-19 01:22:55,396] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=estudiante@uniandes.edu.co
+AIRFLOW_CTX_DAG_OWNER=Estudiante
+AIRFLOW_CTX_DAG_ID=ETL
+AIRFLOW_CTX_TASK_ID=poblar_tablas.poblar_employee
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-18T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2022-05-18T00:00:00+00:00
+[2022-05-19 01:22:55,422] {base.py:79} INFO - Using connection to: id: postgres_localhost. Host: host.docker.internal, Port: 5432, Schema: WWW23, Login: Grupo23BI, Password: ***, extra: {}
+[2022-05-19 01:22:55,872] {dbapi.py:225} INFO - Running statement: INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (1,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (2,'Isabella Rupp','Isabella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (3,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (4,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (5,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (6,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (7,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (8,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (9,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (10,'Piper Koch','Piper','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (11,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (12,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (13,'Henry Forlonge','Henry','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (14,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (15,'Kayla Woodcock','Kayla','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (16,'Katie Darwin','Katie','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (17,'Alica Fatnowna','Alica','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (18,'Eva Muirden','Eva','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (19,'Archer Lamble','Archer','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (20,'Isabella Rupp','Isabella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (21,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (22,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (23,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (24,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (25,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (26,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (27,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (28,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (29,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (30,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (31,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (32,'Piper Koch','Piper','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (33,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (34,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (35,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (36,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (37,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (38,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (39,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (40,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (41,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (42,'Henry Forlonge','Henry','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (43,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (44,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (45,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (46,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (47,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (48,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (49,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (50,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (51,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (52,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (53,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (54,'Kayla Woodcock','Kayla','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (55,'Isabella Rupp','Isabella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (56,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (57,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (58,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (59,'Piper Koch','Piper','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (60,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (61,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (62,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (63,'Kayla Woodcock','Kayla','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (64,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (65,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (66,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (67,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (68,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (69,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (70,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (71,'Henry Forlonge','Henry','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (72,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (73,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (74,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (75,'Piper Koch','Piper','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (76,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (77,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (78,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (79,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (80,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (81,'Kayla Woodcock','Kayla','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (82,'Katie Darwin','Katie','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (83,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (84,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (85,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (86,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (87,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (88,'Isabella Rupp','Isabella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (89,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (90,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (91,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (92,'Alica Fatnowna','Alica','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (93,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (94,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (95,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (96,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (97,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (98,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (99,'Piper Koch','Piper','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (100,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (101,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (102,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (103,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (104,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (105,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (106,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (107,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (108,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (109,'Piper Koch','Piper','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (110,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (111,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (112,'Alica Fatnowna','Alica','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (113,'Henry Forlonge','Henry','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (114,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (115,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (116,'Kayla Woodcock','Kayla','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (117,'Katie Darwin','Katie','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (118,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (119,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (120,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (121,'Alica Fatnowna','Alica','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (122,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (123,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (124,'Katie Darwin','Katie','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (125,'Isabella Rupp','Isabella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (126,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (127,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (128,'Alica Fatnowna','Alica','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (129,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (130,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (131,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (132,'Henry Forlonge','Henry','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (133,'Isabella Rupp','Isabella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (134,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (135,'Alica Fatnowna','Alica','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (136,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (137,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (138,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (139,'Alica Fatnowna','Alica','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (140,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (141,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (142,'Isabella Rupp','Isabella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (143,'Kayla Woodcock','Kayla','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (144,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (145,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (146,'Piper Koch','Piper','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (147,'Piper Koch','Piper','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (148,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (149,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (150,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (151,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (152,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (153,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (154,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (155,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (156,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (157,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (158,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (159,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (160,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (161,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (162,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (163,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (164,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (165,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (166,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (167,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (168,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (169,'Alica Fatnowna','Alica','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (170,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (171,'Kayla Woodcock','Kayla','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (172,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (173,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (174,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (175,'Jack Potter','Jack','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (176,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (177,'Katie Darwin','Katie','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (178,'Piper Koch','Piper','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (179,'Archer Lamble','Archer','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (180,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (181,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (182,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (183,'Henry Forlonge','Henry','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (184,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (185,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (186,'Alica Fatnowna','Alica','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (187,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (188,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (189,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (190,'Eva Muirden','Eva','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (191,'Isabella Rupp','Isabella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (192,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (193,'Kayla Woodcock','Kayla','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (194,'Kayla Woodcock','Kayla','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (195,'Hudson Onslow','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (196,'Isabella Rupp','Isabella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (197,'Eva Muirden','Eva','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (198,'Sophia Hinton','Sophia','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (199,'Amy Trefl','Amy','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (200,'Anthony Grosse','Anthony','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (201,'Alica Fatnowna','Alica','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (202,'Stella Rosenhain','Stella','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (203,'Ethan Onslow','Ethan','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (204,'Henry Forlonge','Henry','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (205,'Hudson Hollinworth','Hudson','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (206,'Lily Code','Lily','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (207,'Taj Shand','Taj','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (208,'Archer Lamble','Archer','True');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (209,'Piper Koch','Piper','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (210,'Katie Darwin','Katie','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (211,'Jai Shand','Jai','False');
+INSERT INTO employee (Employee_Key,Employee,Preferred_Name,Is_Salesperson) VALUES (212,'Jack Potter','Jack','True');, parameters: None
+[2022-05-19 01:22:55,955] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/postgres/operators/postgres.py", line 92, in execute
+    self.hook.run(self.sql, self.autocommit, parameters=self.parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 205, in run
+    self._run_command(cur, sql_statement, parameters)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/hooks/dbapi.py", line 229, in _run_command
+    cur.execute(sql_statement)
+psycopg2.errors.UniqueViolation: llave duplicada viola restricción de unicidad «employee_pkey»
+DETAIL:  Ya existe la llave (employee_key)=(1).
+
+[2022-05-19 01:22:56,006] {taskinstance.py:1288} INFO - Marking task as FAILED. dag_id=ETL, task_id=poblar_tablas.poblar_employee, execution_date=20220518T000000, start_date=20220519T012254, end_date=20220519T012256
+[2022-05-19 01:22:56,060] {standard_task_runner.py:98} ERROR - Failed to execute job 124 for task poblar_tablas.poblar_employee (llave duplicada viola restricción de unicidad «employee_pkey»
+DETAIL:  Ya existe la llave (employee_key)=(1).
+; 114)
+[2022-05-19 01:22:56,319] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-19 01:22:56,782] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
