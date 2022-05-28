@@ -35,47 +35,40 @@ with DAG(
     with TaskGroup('poblar_tablas') as poblar_tablas_dimensiones:
 
         # task: 2.1 poblar tabla city
-        poblar_city = PostgresOperator(
-            task_id="poblar_city",
+        poblar_educacion_fecha = PostgresOperator(
+            task_id="poblar_educacion_fecha",
             postgres_conn_id='postgres_localhost',
-            sql=insert_query_city(csv_path = "dimension_city")
+            sql=insert_query_educacion_fecha(csv_path = "dimension_salud")
         )
 
-        # task: 2.2 poblar tabla customer
-        poblar_customer = PostgresOperator(
-            task_id="poblar_customer",
+        # task: 2.1 poblar tabla city
+        poblar_educacion_departamento = PostgresOperator(
+            task_id="poblar_educacion_departamento",
             postgres_conn_id='postgres_localhost',
-            sql=insert_query_customer(csv_path ="dimension_customer")
+            sql=insert_query_educacion_departamento(csv_path = "dimension_salud")
         )
 
-        # task: 2.3 poblar tabla date
-        poblar_date = PostgresOperator(
-            task_id="poblar_date",
+        # task: 2.1 poblar tabla city
+        poblar_educacion_entidad = PostgresOperator(
+            task_id="poblar_educacion_entidad",
             postgres_conn_id='postgres_localhost',
-            sql=insert_query_date(csv_path = "dimension_date")
+            sql=insert_query_educacion_entidad(csv_path = "dimension_salud")
         )
-
-        # task: 2.4 poblar tabla employee
-        poblar_employee = PostgresOperator(
-            task_id="poblar_employee",
+        
+        # task: 2.1 poblar tabla city
+        poblar_educacion_tipo = PostgresOperator(
+            task_id="poblar_educacion_tipo",
             postgres_conn_id='postgres_localhost',
-            sql=insert_query_employee(csv_path = "dimension_employee")
-        )
-
-        # task: 2.5 poblar tabla stock item
-        poblar_stock_item = PostgresOperator(
-            task_id="poblar_stock_item",
-            postgres_conn_id='postgres_localhost',
-            sql=insert_query_stock(csv_path = "dimension_stock_item")
+            sql=insert_query_educacion_tipo(csv_path = "dimension_salud")
         )
 
 
     # task: 3 poblar la tabla de hechos
-    poblar_fact_order = PostgresOperator(
-            task_id="construir_tabla_de_hechos",
+    poblar_fact_educacion = PostgresOperator(
+            task_id="construir_tabla_de_hechos_educacion",
             postgres_conn_id='postgres_localhost',
-            sql=insert_query_fact_order(csv_path = "fact_order")
+            sql=insert_query_educacion_fact(csv_path = "dimension_salud")
     )
     
     # flujo de ejecución de las tareas  
-    crear_tablas_db >> poblar_tablas_dimensiones >> poblar_fact_order
+    crear_tablas_db >> poblar_tablas_dimensiones >> poblar_fact_educacion

@@ -1,20 +1,60 @@
 from pandas import DataFrame
 from utils.file_util import cargar_datos
 
-# city insertion
-def insert_query_city(**kwargs):
+def insert_query_educacion_fecha(**kwargs):
     
-    insert = f"INSERT INTO city (City_Key,City,State_Province,Country,Continent,Sales_Territory,Region,Subregion,Latest_Recorded_Population) VALUES "
+    insert = f"INSERT INTO fecha (Anio,Mes) VALUES "
     insertQuery = ""
     dataframe =cargar_datos(kwargs['csv_path'])
     for index, row in dataframe.iterrows():
-        insertQuery += insert + f"({row.City_Key},\'{row.City}\',\'{row.State_Province}\',\'{row.Country}\',\'{row.Continent}\',\'{row.Sales_Territory}\',\'{row.Region}\',\'{row.Subregion}\',{row.Latest_Recorded_Population});\n"
+        insertQuery += insert + f"({row.Anio},{row.Mes})"
+        insertQuery += insert + f" WHERE NOT EXISTS (SELECT * FROM fecha WHERE Anio={row.Anio} AND Mes={row.Mes});\n"
+    return insertQuery
+
+def insert_query_educacion_entidad(**kwargs):
+    
+    insert = f"INSERT INTO entidad (Codigo,Nombre) VALUES "
+    insertQuery = ""
+    dataframe =cargar_datos(kwargs['csv_path'])
+    for index, row in dataframe.iterrows():
+        insertQuery += insert + f"({row.Codigo_Entidad},\'{row.Entidad}\')"
+        insertQuery += insert + f" WHERE NOT EXISTS (SELECT * FROM entidad WHERE Codigo={row.Codigo_Entidad} AND Nombre=\'{row.Entidad}\');\n"
+    return insertQuery
+
+def insert_query_educacion_tipo(**kwargs):
+    
+    insert = f"INSERT INTO tipo (Subcategoria,Indicador,Categoria) VALUES "
+    insertQuery = ""
+    dataframe =cargar_datos(kwargs['csv_path'])
+    for index, row in dataframe.iterrows():
+        insertQuery += insert + f"(\'{row.Subcategoria}\',\'{row.Indicador}\',\'{row.Categoria}\')"
+        insertQuery += insert + f" WHERE NOT EXISTS (SELECT * FROM tipo WHERE Subcategoria=\'{row.Subcategoria}\' AND Indicador=\'{row.Indicador}\' AND Categoria=\'{row.Categoria}\');\n"
+    return insertQuery
+
+def insert_query_educacion_departamento(**kwargs):
+    insert = f"INSERT INTO departamento (Codigo,Nombre) VALUES "
+    insertQuery = ""
+    dataframe =cargar_datos(kwargs['csv_path'])
+    for index, row in dataframe.iterrows():
+        insertQuery += insert + f"({row.Codigo_Departamento},\'{row.Departamento}\');\n"
+        insertQuery += insert + f" WHERE NOT EXISTS (SELECT * FROM departamento WHERE Codigo_Departamento={row.Codigo_Departamento} AND Departamento=\'{row.Departamento}\');\n"
+    return insertQuery
+
+def insert_query_educacion_fact(**kwargs):
+    
+    insert = f"INSERT INTO fact_registro (Departamento,Fecha,Entidad,Tipo,Dato_Numerico,Dato_Cualitativo,Unidad_Medida) VALUES "
+    insertQuery = ""
+    valueTipo=f'(SELECT Tipo_Key FROM tipo WHERE Subcategoria=\'{row.Subcategoria}\' AND Indicador=\'{row.Indicador}\' AND Categoria=\'{row.Categoria}\')'
+    valueFecha=f'(SELECT Fecha_Key FROM fecha WHERE Anio={row.Anio} AND Mes={row.Mes})'
+    dataframe =cargar_datos(kwargs['csv_path'])
+    for index, row in dataframe.iterrows():
+        insertQuery += insert + f"({row.Codigo_Departamento},{valueFecha},{row.Codigo_Entidad},{valueTipo},{row.Dato_Numerico},\'{row.Dato_Cualitativo}\',\'{row.Unidad_Medida}\');\n"
     return insertQuery
 
 # customer insertion
 def insert_query_customer(**kwargs):
     # To Do
-    insert= f"INSERT INTO customer (Customer_Key,Customer,Bill_To_Customer,Category,Buying_Group,Primary_Contact,Postal_Code) VALUES "
+    insert= f"INSERT INTO customer (Anio,Mes) VALUES "
     insertQuery = ""
     dataframe = cargar_datos(kwargs["csv_path"])
     for index, row in dataframe.iterrows():

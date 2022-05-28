@@ -1,0 +1,10 @@
+2022-05-28 00:56:40.908 -05 [10083] LOG:  starting PostgreSQL 14.3 on aarch64-apple-darwin20.6.0, compiled by Apple clang version 12.0.5 (clang-1205.0.22.9), 64-bit
+2022-05-28 00:56:40.912 -05 [10083] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-05-28 00:56:40.912 -05 [10083] LOG:  listening on IPv6 address "::1", port 5432
+2022-05-28 00:56:40.912 -05 [10083] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-05-28 00:56:40.914 -05 [10084] LOG:  database system was shut down at 2022-05-28 00:56:40 -05
+2022-05-28 00:56:40.916 -05 [10083] LOG:  database system is ready to accept connections
+2022-05-28 01:29:39.552 -05 [10083] LOG:  received smart shutdown request
+2022-05-28 01:29:39.553 -05 [10083] LOG:  background worker "logical replication launcher" (PID 10090) exited with exit code 1
+2022-05-28 01:29:39.555 -05 [10085] LOG:  shutting down
+2022-05-28 01:29:39.578 -05 [10083] LOG:  database system is shut down

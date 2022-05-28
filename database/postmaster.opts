@@ -1,0 +1,1 @@
+/Applications/Postgres.app/Contents/Versions/14/bin/postgres "-D" "/Users/santiagotriana/Documents/Universidad/Inteligencia de Negocios/Semana 16/Proyecto2_BI/database" "-p" "5432"

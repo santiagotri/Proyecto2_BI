@@ -31,7 +31,7 @@ def crear_tablas():
             Entidad INT REFERENCES entidad(Codigo),
             Tipo INT REFERENCES tipo(Tipo_Key)
             Dato_Numerico INT,
-            Dato_cualitativo VARCHAR(150),
-            Unidad_medida VARCHAR(150)
+            Dato_Cualitativo VARCHAR(150),
+            Unidad_;edida VARCHAR(150)
         );
     """
